@@ -42,22 +42,22 @@ Winning and draws:
 
 ## Tasks
 
-1. There is a `Board` class that represents the square board of Polish draughts.
+1. There is a `com.game.Board` class that represents the square board of Polish draughts.
     - There is an `n` parameter in the constructor that specifies the side length of the square. The size must be an integer between 10 and 20. It is provided as user input.
-    - There is a `Pawn[][] fields` 2D array that represents fields on a board. Each field can be `null` (empty) or a `Pawn` instance.
+    - There is a `com.game.Pawn[][] fields` 2D array that represents fields on a board. Each field can be `null` (empty) or a `com.game.Pawn` instance.
     - Pawns are created and placed on every other field when the board is initialized. Their number is determined by board size, as a `2 * n`.
     - There is a `toString()` method that overrides the built-in method. This method marks rows as numbers and columns as letters.
     - There is a `removePawn()` method that removes pawns from the specified position.
     - There is a `movePawn()` method that moves pawns from a specified position to another field.
 
-2. There is a `Pawn` class.
+2. There is a `com.game.Pawn` class.
     - There is a `Color getColor()` method that returns the color of the the pawn(white or black).
     - There is a field of the `Coordinates position` class that represents pawn coordinates on a board. The `Coordinates` class has two fields, `int x` and `int y`.
     - [Extra] There is `boolean isCrowned` field that returns `true` if a pawn is crowned.
-    - The `Pawn` class contains a method that validates the move (whether it is within the game rules) before it is performed.
-    - [Extra] The `Pawn` class can check if the pawn can make multiple jumps according to the rules.
+    - The `com.game.Pawn` class contains a method that validates the move (whether it is within the game rules) before it is performed.
+    - [Extra] The `com.game.Pawn` class can check if the pawn can make multiple jumps according to the rules.
 
-3. There is a `Game` class that contains all game logic and actions.
+3. There is a `com.game.Game` class that contains all game logic and actions.
     - There is a `start()` method that starts game between players.
     - There is a method `playRound()` that determines one-round actions that is, checks which player is next and whether there is a winner.
     - There is a method that checks if the starting position from user input is a valid pawn and if the ending position is within board boundaries. If so, it calls `tryToMakeMove()` on pawn instance.
@@ -65,9 +65,9 @@ Winning and draws:
     - The `checkForWinner()` method also checks for draws.
 
 4. [OPTIONAL] Try to implement the singleton pattern. Try to implement additional features such as crowning, multi-jumping, and checking for draw.
-    - The `Board` is a singleton, so it can have only one instance.
-    - The Crowned feature is implemented. There is a property on `Pawn` called `boolean isCrowned` that returns `true` if a pawn is crowned and it implements crowning rules.
-    - The `Pawn` class can check if it can make multiple jumps according to the rules.
+    - The `com.game.Board` is a singleton, so it can have only one instance.
+    - The Crowned feature is implemented. There is a property on `com.game.Pawn` called `boolean isCrowned` that returns `true` if a pawn is crowned and it implements crowning rules.
+    - The `com.game.Pawn` class can check if it can make multiple jumps according to the rules.
 
 ## General requirements
 
